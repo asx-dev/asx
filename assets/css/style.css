@@ -79,60 +79,76 @@ html {
 .section {
   padding: 4rem 0 2rem;
 }
-.section:nth-child(1) {
-  padding-top: 0.5rem;
+
+.main__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Space below the text */
+  padding-bottom: 0.25rem; /* Space above the border */
+  border-bottom: 1px solid #e1e4e8; /* Light gray border */
+  color: #333;
+}
+
+.second__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e1e4e8;
+  color: #444;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  color: #555;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 /* Header */
-.header {
-  display: none;
+.nav {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 19rem;
+  height: 19rem;
+  padding: 2.5rem 0;
+  backdrop-filter: blur(3rem);
+  border-radius: 0.5rem;
+  transition: top 0.5s;
 }
+.nav__menu {
+  height: 100%;
+}
+.nav__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* Hero */
-.hero__img {
-  margin-bottom: 2rem;
+.header__banner {
+  margin-top: 0.5rem;
 }
 .banner {
   border-radius: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.hero__title {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.hero__subtitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.hero__description {
-  margin-bottom: 1rem;
-}
-.hero__title-skills {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
 
-.hero__skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-}
-
-.hero__skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skill-logo {
-  width: 50px;
-  height: 50px;
-}
-
-.skill__title {
-  font-size: 1rem;
-  font-weight: 400;
+/* Resume Section */
+/* TODO: Create grid for tech skills */
+.skill__logo {
+  width: 3.5rem;
+  height: 3.5rem;
 }
