@@ -72,7 +72,7 @@ html {
 }
 
 .section {
-  padding: 4rem 0 2rem;
+  padding: 4rem 0 0;
 }
 
 .main__title {
@@ -171,4 +171,27 @@ html {
 .social__logo {
   width: 4rem;
   height: 4rem;
+}
+
+/* Projects */
+.projects__container {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+.project__item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 1rem;
+}
+.project__img {
+  border-radius: 0.5rem;
+}
+
+.code__link {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.5rem;
 }
