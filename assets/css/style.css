@@ -1,14 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul,
@@ -73,7 +68,7 @@ html {
 .container {
   max-width: 968px;
   margin: 0 auto;
-  padding-inline: 1rem;
+  padding: 1rem;
 }
 
 .section {
@@ -137,8 +132,9 @@ html {
 }
 
 /* Hero */
-.header__banner {
-  margin-top: 0.5rem;
+.hero__banner {
+  margin-top: 1rem;
+  padding: 0;
 }
 .banner {
   border-radius: 0.7rem;
@@ -147,8 +143,32 @@ html {
 }
 
 /* Resume Section */
-/* TODO: Create grid for tech skills */
+.resume__container {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.resume__skills {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.resume__item {
+  display: flex;
+  justify-content: center;
+}
 .skill__logo {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.resume__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social__logo {
+  width: 4rem;
+  height: 4rem;
 }
