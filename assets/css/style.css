@@ -116,9 +116,11 @@ html {
   width: 19rem;
   height: 19rem;
   padding: 2.5rem 0;
-  backdrop-filter: blur(3rem);
+  background-color: #91919157;
+  backdrop-filter: blur(1rem);
   border-radius: 0.5rem;
   transition: top 0.5s;
+  z-index: 1000;
 }
 .nav__menu {
   height: 100%;
@@ -135,6 +137,7 @@ html {
 .hero__banner {
   margin-top: 1rem;
   padding: 0;
+  position: relative;
 }
 .banner {
   border-radius: 0.7rem;
@@ -142,6 +145,29 @@ html {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+/* Navigation Menu */
+.open__button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.38);
+  backdrop-filter: blur(3rem);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.close__button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+.open {
+  top: 0.5rem;
+}
 /* Resume Section */
 .resume__container {
   border: 1px solid #ccc;
@@ -159,18 +185,19 @@ html {
   justify-content: center;
 }
 .skill__logo {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .resume__socials {
   display: flex;
   gap: 1rem;
+  padding: 1rem 0;
 }
 
 .social__logo {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 /* Projects */
