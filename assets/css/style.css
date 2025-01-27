@@ -186,7 +186,9 @@ html {
 .project__img {
   border-radius: 0.5rem;
 }
-
+.project__content {
+  align-content: center;
+}
 .code__link {
   display: flex;
   align-items: center;
@@ -194,4 +196,13 @@ html {
 
 .icon {
   margin-right: 0.5rem;
+}
+/* Footer */
+.footer__container {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.footer__socials {
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
