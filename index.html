@@ -10,7 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <title>Anthony Sandoval</title>
+    <title>Anthony Sandoval | Software engineer</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -27,38 +27,50 @@
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
             </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Resume</a>
+            </li>
           </ul>
         </div>
       </nav>
-      <!-- Mobile Menu -->
-      <!-- <div class="mobile__menu">
-        <a href="#" class="close__button" id="close-button">
-          <i class="fa-solid fa-x"></i>
-        </a>
-        <ul class="mobile__nav-list">
-          <li>
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li>
-            <a href="#experience" class="nav__link">Experience</a>
-          </li>
-          <li>
-            <a href="#projects" class="nav__link">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </div> -->
     </header>
+    <!-- Mobile Menu -->
+    <div class="mobile__menu">
+      <a href="#" class="close__button" id="close-button">
+        <i class="fa-solid fa-x"></i>
+      </a>
+      <ul class="mobile__nav-list">
+        <li>
+          <a href="#about" class="nav__link">About</a>
+        </li>
+        <li>
+          <a href="#experience" class="nav__link">Experience</a>
+        </li>
+        <li>
+          <a href="#projects" class="nav__link">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav__link">Contact</a>
+        </li>
+      </ul>
+    </div>
     <main>
       <!-- Hero Section -->
       <section class="hero section">
-        <div class="hero__banner container">
+        <div class="hero__banner">
+          <div class="hero__content container">
+            <h1 class="hero__title">Junior Software Engineer</h1>
+            <h3 class="subtitle">
+              Specializing in Full-Stack Web Development with MERN
+            </h3>
+            <a href="#resume" class="hero__button">
+              <i class="fa-solid fa-caret-down hero__icon"></i>
+              <p>Star Exploring</p>
+            </a>
+          </div>
           <a href="#" class="open__button" id="open-button">
             <i class="fa-solid fa-bars"></i>
           </a>
-          <img src="/assets/img/asx-hero.png" alt="" class="banner" />
         </div>
       </section>
       <!-- Resume section -->
@@ -1060,20 +1072,20 @@
     <!-- Footer -->
     <footer class="footer" id="footer">
       <div class="footer__container container">
-        <div class="contact__form-container">
-          <form action="" method="post" class="contact__form">
-            <input
-              type="text"
-              name="email"
-              placeholder="Send me an email..."
-              class="contact__input"
-              id="contact"
-            />
-            <button type="submit" class="contact__button">
-              <i class="fa-solid fa-paper-plane" class="contact__icon"></i>
-            </button>
-          </form>
-        </div>
+        <form action="" method="post" class="contact__form">
+          <input
+            type="text"
+            name="email"
+            placeholder="Send me an email..."
+            class="contact__input"
+            id="contact"
+          />
+          <button type="submit" class="contact__button">
+            <i class="fa-solid fa-paper-plane" class="contact__icon"></i>
+          </button>
+        </form>
+
+        <small>© 2025 Anthony Sandoval | Developed by asx-dev.</small>
         <div class="footer__socials-links">
           <a
             href="https://github.com/asx-dev"
@@ -1094,9 +1106,11 @@
             ><i class="fa-brands fa-whatsapp"></i
           ></a>
         </div>
-        <small>© 2025 Anthony Sandoval | Developed by asx-dev.</small>
       </div>
     </footer>
+    <a href="#" class="up__arrow">
+      <i class="fa-solid fa-caret-up"></i>
+    </a>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

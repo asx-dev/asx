@@ -114,7 +114,6 @@ html {
 
 /* Header */
 .header {
-  background-color: rgba(128, 128, 128, 0.38);
   backdrop-filter: blur(3rem);
   top: 0;
   width: 100%;
@@ -126,43 +125,113 @@ html {
 }
 .nav__list {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
 }
-
-/* .nav {
+.mobile__menu {
   position: fixed;
   top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 19rem;
+  left: 0;
+  width: 100%;
   height: 19rem;
   padding: 2.5rem 0;
   background-color: #91919157;
   backdrop-filter: blur(1rem);
-  border-radius: 0.5rem;
   transition: top 0.5s;
   z-index: 1000;
 }
-.nav__menu {
-  height: 100%;
-}
-.nav__list {
+.mobile__nav-list {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-} */
+}
+
+/* Up arrow */
+.up__arrow {
+  position: fixed;
+  right: 1.5rem;
+  bottom: -100%;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 1rem;
+  transition: bottom 0.3s;
+}
+
+.show {
+  bottom: 1.5rem;
+}
 
 /* Hero */
 .hero__banner {
   padding: 0;
   position: relative;
+  background-image: url("/assets/img/hero-light.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
-.banner {
-  border-radius: 0.7rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+.hero__content {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.hero__title {
+  font-size: 4rem;
+}
+.hero__button {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: 0.3s;
+}
+.hero__icon {
+  animation: moveUpDown 0.5s ease-in-out infinite;
+  font-size: 1.5rem;
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0); /* Initial position */
+  }
+  50% {
+    transform: translateY(-0.3rem); /* Move up by 0.5rem */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .hero__banner {
+    background-image: url("/assets/img/hero-dark.png");
+  }
+  body {
+    background-color: #151617;
+    color: white;
+  }
+  .main__title,
+  .second__title,
+  .subtitle {
+    color: white;
+  }
+  .hero__button,
+  .up__arrow {
+    background-color: white;
+    color: black;
+  }
+  .hero__button:hover,
+  .up__arrow:hover {
+    background-color: #777;
+    color: white;
+  }
 }
 
 /* Navigation Menu */
@@ -187,7 +256,7 @@ html {
   color: white;
 }
 .open {
-  top: 0.5rem;
+  top: 0;
 }
 /* Resume Section */
 .resume__container {
@@ -214,6 +283,7 @@ html {
   display: flex;
   gap: 1rem;
   padding: 1rem 0;
+  justify-content: center;
 }
 
 .social__logo {
@@ -251,13 +321,13 @@ html {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
+  text-align: center;
 }
 .footer__socials {
   font-size: 1.5rem;
   margin-right: 1rem;
 }
-
 .contact__form {
   display: flex;
   justify-content: center;
@@ -266,6 +336,7 @@ html {
   border: 1px solid #ccc;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem 0 0 0.5rem;
+  width: 100%;
 }
 input:focus {
   border-color: #333;
@@ -287,8 +358,37 @@ input:focus {
 }
 
 /* Responsive Styles */
-/* Tablet breakpoint */
+
 @media (max-width: 768px) {
+  .section {
+    padding: 1.5rem 0 0;
+  }
+  .resume__skills {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .project__item {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+  .resume__container,
+  .projects__container {
+    border: none;
+  }
+  .open__button {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
+  .hero {
+    padding-top: 0;
+  }
+  .hero__banner {
+    align-content: center;
+  }
+  .hero__title {
+    font-size: 3rem;
+  }
   .main__title {
     font-size: 2rem;
   }
@@ -308,6 +408,12 @@ input:focus {
 
 /* Mobile breakpoint */
 @media (max-width: 480px) {
+  .resume__skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero__title {
+    font-size: 2.25rem;
+  }
   .main__title {
     font-size: 1.75rem;
   }
