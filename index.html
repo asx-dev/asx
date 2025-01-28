@@ -15,18 +15,11 @@
   <body>
     <!-- HEADER -->
     <header id="header" class="header">
-      <nav class="nav">
-        <!-- Mobile Menu -->
+      <nav class="nav container">
         <div class="nav__menu">
-          <a href="#" class="close__button" id="close-button">
-            <i class="fa-solid fa-x"></i>
-          </a>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#experience" class="nav__link">Experience</a>
+              <a href="#resume" class="nav__link">About</a>
             </li>
             <li class="nav__item">
               <a href="#projects" class="nav__link">Projects</a>
@@ -37,10 +30,30 @@
           </ul>
         </div>
       </nav>
+      <!-- Mobile Menu -->
+      <!-- <div class="mobile__menu">
+        <a href="#" class="close__button" id="close-button">
+          <i class="fa-solid fa-x"></i>
+        </a>
+        <ul class="mobile__nav-list">
+          <li>
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li>
+            <a href="#experience" class="nav__link">Experience</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav__link">Projects</a>
+          </li>
+          <li>
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </div> -->
     </header>
     <main>
       <!-- Hero Section -->
-      <section class="hero">
+      <section class="hero section">
         <div class="hero__banner container">
           <a href="#" class="open__button" id="open-button">
             <i class="fa-solid fa-bars"></i>
@@ -1047,6 +1060,20 @@
     <!-- Footer -->
     <footer class="footer" id="footer">
       <div class="footer__container container">
+        <div class="contact__form-container">
+          <form action="" method="post" class="contact__form">
+            <input
+              type="text"
+              name="email"
+              placeholder="Send me an email..."
+              class="contact__input"
+              id="contact"
+            />
+            <button type="submit" class="contact__button">
+              <i class="fa-solid fa-paper-plane" class="contact__icon"></i>
+            </button>
+          </form>
+        </div>
         <div class="footer__socials-links">
           <a
             href="https://github.com/asx-dev"

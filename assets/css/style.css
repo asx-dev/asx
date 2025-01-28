@@ -108,7 +108,23 @@ html {
 }
 
 /* Header */
+.header {
+  background-color: rgba(128, 128, 128, 0.38);
+  backdrop-filter: blur(3rem);
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
 .nav {
+  padding-inline: 0;
+}
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* .nav {
   position: fixed;
   top: -100%;
   left: 50%;
@@ -131,11 +147,10 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 /* Hero */
 .hero__banner {
-  margin-top: 1rem;
   padding: 0;
   position: relative;
 }
@@ -147,6 +162,7 @@ html {
 
 /* Navigation Menu */
 .open__button {
+  display: none;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -226,10 +242,80 @@ html {
 }
 /* Footer */
 .footer__container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   padding: 2.5rem 0;
 }
 .footer__socials {
   font-size: 1.5rem;
   margin-right: 1rem;
+}
+
+.contact__form {
+  display: flex;
+  justify-content: center;
+}
+.contact__input {
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+input:focus {
+  border-color: #333;
+  outline: none;
+}
+.contact__button {
+  padding: 0 1rem;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.contact__button:hover {
+  background-color: #777;
+}
+.contact__icon {
+  font-size: 1.5rem;
+}
+
+/* Responsive Styles */
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  .main__title {
+    font-size: 2rem;
+  }
+
+  .second__title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  .main__title {
+    font-size: 1.75rem;
+  }
+
+  .second__title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
 }
