@@ -34,6 +34,7 @@
         </div>
       </nav>
     </header>
+
     <!-- Mobile Menu -->
     <div class="mobile__menu">
       <a href="#" class="close__button" id="close-button">
@@ -54,12 +55,16 @@
         </li>
       </ul>
     </div>
+
     <main>
       <!-- Hero Section -->
       <section class="hero section">
-        <div class="hero__banner">
-          <div class="hero__content container">
-            <h1 class="hero__title">Junior Software Engineer</h1>
+        <div class="hero__container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span class="hero__name">Anthony Sandoval</span>
+              <span class="hero__job">Software Engineer</span>
+            </h1>
             <h3 class="subtitle">
               Specializing in Full-Stack Web Development with MERN
             </h3>
@@ -73,6 +78,7 @@
           </a>
         </div>
       </section>
+
       <!-- Resume section -->
       <section class="resume section" id="resume">
         <div class="resume__container container">
@@ -1002,6 +1008,7 @@
           </div>
         </div>
       </section>
+
       <!-- Projects -->
       <section class="projects section" id="projects">
         <div class="projects__container container">
@@ -1069,12 +1076,18 @@
         </div>
       </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer" id="footer">
       <div class="footer__container container">
-        <form action="" method="post" class="contact__form">
+        <form
+          action="mailto:asxdev18@gmail.com"
+          method="post"
+          enctype="text/plain"
+          class="contact__form"
+        >
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Send me an email..."
             class="contact__input"
@@ -1108,6 +1121,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Back to top arrow -->
     <a href="#" class="up__arrow">
       <i class="fa-solid fa-caret-up"></i>
     </a>

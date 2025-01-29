@@ -67,6 +67,9 @@ html {
   font-family: "Poppins", "sans-serif";
   font-size: 1rem;
 }
+body {
+  background-color: #f8f9fa;
+}
 
 /* Utility Clases */
 
@@ -115,7 +118,6 @@ html {
 /* Header */
 .header {
   backdrop-filter: blur(3rem);
-  top: 0;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -166,8 +168,8 @@ html {
 }
 
 /* Hero */
-.hero__banner {
-  padding: 0;
+.hero__container {
+  padding-inline: 1rem;
   position: relative;
   background-image: url("/assets/img/hero-light.png");
   background-size: cover;
@@ -181,6 +183,9 @@ html {
 }
 .hero__title {
   font-size: 4rem;
+}
+.hero__name {
+  display: block;
 }
 .hero__button {
   display: flex;
@@ -210,7 +215,7 @@ html {
   }
 }
 @media (prefers-color-scheme: dark) {
-  .hero__banner {
+  .hero__container {
     background-image: url("/assets/img/hero-dark.png");
   }
   body {
@@ -359,7 +364,16 @@ input:focus {
 
 /* Responsive Styles */
 
+@media (min-width: 1300px) {
+  .hero__name {
+    display: inline;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero__container {
+    padding-top: 5rem;
+  }
   .section {
     padding: 1.5rem 0 0;
   }
@@ -382,9 +396,6 @@ input:focus {
   }
   .hero {
     padding-top: 0;
-  }
-  .hero__banner {
-    align-content: center;
   }
   .hero__title {
     font-size: 3rem;
