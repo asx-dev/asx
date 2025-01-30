@@ -308,6 +308,8 @@ body {
 }
 .project__img {
   border-radius: 0.5rem;
+  max-height: 350px;
+  object-fit: cover;
 }
 .project__content {
   align-content: center;
