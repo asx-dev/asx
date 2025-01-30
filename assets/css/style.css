@@ -308,7 +308,7 @@ body {
 }
 .project__img {
   border-radius: 0.5rem;
-  max-height: 350px;
+  max-height: 21rem;
   object-fit: cover;
 }
 .project__content {
@@ -317,6 +317,7 @@ body {
 .code__link {
   display: flex;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .icon {
