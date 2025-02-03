@@ -305,6 +305,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-top: 1rem;
+  gap: 0.5rem;
 }
 .project__img {
   border-radius: 0.5rem;
