@@ -19,3 +19,18 @@ window.addEventListener("scroll", () => {
     ? upButton.classList.add("show")
     : upButton.classList.remove("show");
 });
+
+// Skill Icons Responsive
+const skillsIcons = document.querySelector(".skills__icons");
+
+const iconsMobileDesign =
+  "https://skillicons.dev/icons?i=html,css,javascript,vite,react,redux,tailwind,bootstrap,nodejs,express,mongodb,postman,git,github,vscode,netlify,appwrite&perline=5";
+const iconsDesktopDesign =
+  "https://skillicons.dev/icons?i=html,css,javascript,vite,react,redux,tailwind,bootstrap,nodejs,express,mongodb,postman,git,github,vscode,netlify,appwrite&perline=13";
+
+window.addEventListener("resize", () => {
+  const width = window.innerWidth;
+  width < 600
+    ? (skillsIcons.src = iconsMobileDesign)
+    : (skillsIcons.src = iconsDesktopDesign);
+});
