@@ -28,9 +28,13 @@ const iconsMobileDesign =
 const iconsDesktopDesign =
   "https://skillicons.dev/icons?i=html,css,javascript,vite,react,redux,tailwind,bootstrap,nodejs,express,mongodb,postman,git,github,vscode,netlify,appwrite&perline=13";
 
-window.addEventListener("resize", () => {
+function updateIcons() {
   const width = window.innerWidth;
   width < 600
     ? (skillsIcons.src = iconsMobileDesign)
     : (skillsIcons.src = iconsDesktopDesign);
-});
+}
+
+updateIcons();
+
+window.addEventListener("resize", updateIcons);
