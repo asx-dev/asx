@@ -2,6 +2,7 @@
 const openMenuButton = document.getElementById("open-button");
 const closeMenuButton = document.getElementById("close-button");
 const menu = document.querySelector(".mobile__menu");
+const navLinks = document.querySelectorAll(".mobile__nav-list .nav__link");
 
 openMenuButton.addEventListener("click", () => {
   menu.classList.add("open");
@@ -9,6 +10,12 @@ openMenuButton.addEventListener("click", () => {
 
 closeMenuButton.addEventListener("click", () => {
   menu.classList.remove("open");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("open");
+  });
 });
 
 // Up arrow
